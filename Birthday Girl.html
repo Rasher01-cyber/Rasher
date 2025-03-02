@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Harshali!</title>
+    <style>
+        body {
+            background-image: url('Birthday Girl.jpg'); /* Ensure this image is in the same folder */
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        h1 {
+            font-size: 60px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+        }
+        p {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .message-box {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 15px;
+        }
+        .gift-box {
+            margin-top: 20px;
+            width: 250px;
+            height: 250px;
+            background-image: url('Gift Box.webp'); /* Ensure this image is in the same folder */
+            background-size: cover;
+            cursor: pointer;
+        }
+        .gift-content {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="message-box">
+        <h1>Happy Birthday, Harshali! 🎉</h1>
+        <p>May your day be filled with love, laughter, and all the happiness in the world!</p>
+    </div>
+    
+    <div class="gift-box" onclick="openGift()"></div>
+    
+    <div class="gift-content" id="giftContent">
+        <img src="Surprice.jpg" alt="Birthday Surprise" width="300">
+        <audio id="birthdayMusic" loop>
+            <source src="Birthday Girl.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    
+    <script>
+        function openGift() {
+            document.querySelector('.gift-box').style.display = 'none';
+            document.getElementById('giftContent').style.display = 'block';
+            document.getElementById('birthdayMusic').play();
+        }
+    </script>
+</body>
+</html>
